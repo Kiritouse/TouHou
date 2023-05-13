@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="游戏管理">
+      <UniqueIdentifier>{b2f3676d-4969-4f5f-bf3d-53cc57d72695}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="资源加载">
+      <UniqueIdentifier>{20f11e07-48ac-4ff8-9674-e9d97ca521c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{5d23c2fd-8682-42e7-8599-6d292b6cd24d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="音乐">
+      <UniqueIdentifier>{5af04762-9c19-48cc-b94b-f7de228f2843}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{c59ad12f-dbaa-4930-b5ad-aad62f3add9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="玩家">
+      <UniqueIdentifier>{1817084c-c138-4f85-bd41-05ffdf3698c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="地图背景">
+      <UniqueIdentifier>{0c7ea629-437c-49ce-9ddf-8ed307472fd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="透明绘图">
+      <UniqueIdentifier>{997a30f9-479a-4c5b-b491-7446d8269c19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="帧数管理">
+      <UniqueIdentifier>{6fd64c4b-02f5-430c-ab87-2ef8acab0c1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MathAndPhysics">
+      <UniqueIdentifier>{0df34fc1-89be-47ce-8b0d-c45a26c49e52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="敌人">
+      <UniqueIdentifier>{b9cbecc5-3897-4f01-b14f-60101c2cc12d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="获取操作">
+      <UniqueIdentifier>{876fecfc-7125-4a43-b2f7-da8643738e4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="玩家\子弹">
+      <UniqueIdentifier>{b89391a0-40d3-4ae8-b511-5bcaed889235}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="敌人\敌人子弹">
+      <UniqueIdentifier>{ec8bf952-0c8c-429d-ad8c-d29b1c5ffb99}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="粒子">
+      <UniqueIdentifier>{d6367aa5-4f76-48ee-88ff-5e82cd77fdb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="存档管理">
+      <UniqueIdentifier>{ac2cb42b-fc0d-4a7c-8454-be1c2851ecb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="玩家\护盾">
+      <UniqueIdentifier>{7bfc8875-2efe-410f-abd9-f94b481c340a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>玩家\子弹</Filter>
+    </ClCompile>
+    <ClCompile Include="Draw.cpp">
+      <Filter>透明绘图</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>地图背景</Filter>
+    </ClCompile>
+    <ClCompile Include="GameManager.cpp">
+      <Filter>游戏管理</Filter>
+    </ClCompile>
+    <ClCompile Include="Interface.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="LoadResources.cpp">
+      <Filter>资源加载</Filter>
+    </ClCompile>
+    <ClCompile Include="Music.cpp">
+      <Filter>音乐</Filter>
+    </ClCompile>
+    <ClCompile Include="mainGame.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="Operation.cpp">
+      <Filter>获取操作</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>玩家</Filter>
+    </ClCompile>
+    <ClCompile Include="FrameManager.cpp">
+      <Filter>帧数管理</Filter>
+    </ClCompile>
+    <ClCompile Include="MathAndPhysics.cpp">
+      <Filter>MathAndPhysics</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>敌人</Filter>
+    </ClCompile>
+    <ClCompile Include="EnemyBullet.cpp">
+      <Filter>敌人\敌人子弹</Filter>
+    </ClCompile>
+    <ClCompile Include="ParticleManager.cpp">
+      <Filter>粒子</Filter>
+    </ClCompile>
+    <ClCompile Include="DataManager.cpp">
+      <Filter>存档管理</Filter>
+    </ClCompile>
+    <ClCompile Include="bunker.cpp">
+      <Filter>玩家\护盾</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Bullet.h">
+      <Filter>玩家\子弹</Filter>
+    </ClInclude>
+    <ClInclude Include="Draw.h">
+      <Filter>透明绘图</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>地图背景</Filter>
+    </ClInclude>
+    <ClInclude Include="GameManager.h">
+      <Filter>游戏管理</Filter>
+    </ClInclude>
+    <ClInclude Include="Interface.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="LoadResources.h">
+      <Filter>资源加载</Filter>
+    </ClInclude>
+    <ClInclude Include="Music.h">
+      <Filter>音乐</Filter>
+    </ClInclude>
+    <ClInclude Include="Operation.h">
+      <Filter>获取操作</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>玩家</Filter>
+    </ClInclude>
+    <ClInclude Include="FrameManager.h">
+      <Filter>帧数管理</Filter>
+    </ClInclude>
+    <ClInclude Include="MathAndPhysics.h">
+      <Filter>MathAndPhysics</Filter>
+    </ClInclude>
+    <ClInclude Include="Flyers.h" />
+    <ClInclude Include="Enemy.h">
+      <Filter>敌人</Filter>
+    </ClInclude>
+    <ClInclude Include="EnemyBullet.h">
+      <Filter>敌人\敌人子弹</Filter>
+    </ClInclude>
+    <ClInclude Include="ParticleManager.h">
+      <Filter>粒子</Filter>
+    </ClInclude>
+    <ClInclude Include="DataManager.h">
+      <Filter>存档管理</Filter>
+    </ClInclude>
+    <ClInclude Include="bunker.h">
+      <Filter>玩家\护盾</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,3 @@
+D:\Codes\TH0\TH\x64\Debug\TH.exe
+D:\Codes\TouHouInc--\x64\Debug\TH.exe
+D:\Codes\TouHou\TouHou\x64\Debug\TH.exe
