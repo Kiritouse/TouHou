@@ -7,6 +7,7 @@
 #include <cstddef>
 #include <graphics.h>
 #include <Windows.h>
+#include <thread>
 #include "Operation.h"
 #include "ParticleManager.h"
 #include "DataManager.h"
@@ -136,7 +137,9 @@ void bulletCrashEnemyCheck(EnemyNode** pp_Enemy_List_Head, BulletNode** pp_Playe
 						curEnemy->isExist = 0;
 						user.score++;
 						playsound(2, 0);
-						createFireworks(&curEnemy);
+						std::thread t1(createFireworks, curEnemy->x, curEnemy->y);//把粒子效果放入多线程中
+						t1.detach();
+
 					}
 					else {
 						//std::cout << curBullet->hitpoint << std::endl;

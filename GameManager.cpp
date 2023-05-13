@@ -158,7 +158,6 @@ void update_Paintings(int framebuffer) {
 	update_EnemyBulletImage(&p_Enemy_Bullet_List_Node);
 	if (Struct_bunker->isExist) drawBunker();
 	update_Particle();
-
 	putStatePlayer();
 	EndBatchDraw();
 }

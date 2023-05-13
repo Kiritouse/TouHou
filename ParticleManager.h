@@ -1,5 +1,5 @@
 #pragma once
 #include "Enemy.h"
-void createFireworks(EnemyNode** pp_curEnemy);
+void createFireworks(int x, int y);
 
 void update_Particle();

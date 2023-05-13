@@ -6,3 +6,5 @@ f 7
 sad 16
 asdas 25
 asdas 17
+asdas 0
+asdasd 27

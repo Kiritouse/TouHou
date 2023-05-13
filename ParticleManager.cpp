@@ -3,15 +3,15 @@
 #include <time.h>
 #include <list>
 #include <graphics.h>
-const int GW = WIDTH_MAP;					// Screen width屏幕的宽度
-const int GH = HEIGHT_MAP;					// Screen height屏幕的高度
-const double g = 9.8;				// Acceleration of gravity重力
+const int GW = WIDTH_MAP;					// 屏幕的宽度
+const int GH = HEIGHT_MAP;					// 屏幕的高度
+const double g = 9.8;				//重力
 //const double PI = 3.1415926;
-const int len_max = 130;				// The maximum length of LightLine光线的最大长度
-const int h_max = GH - len_max;		// The maximum height that LightLine can reach光线能到达的最高高度
-const double v_max = sqrt(2 * g * h_max / 10);	// Maximum initial velocity of LightLine最大初速度 mgh=mv^2 重力势能=动能  
+const int len_max = 130;				// 光线的最大长度
+const int h_max = GH - len_max;		// 光线能到达的最高高度
+const double v_max = sqrt(2 * g * h_max / 10);	// 最大初速度 mgh=mv^2 重力势能=动能  
 //除以10的缘故是公式是用m做单位,1m代表10个像素点
-const int n_max = 5;				// Maximum number of fireworks on the screen烟花在屏幕上同时存在最多的数量
+const int n_max = 5;				// 烟花在屏幕上同时存在最多的数量
 
 class ParticleSwarm
 {
@@ -54,10 +54,8 @@ ParticleSwarm::ParticleSwarm(int x, int y, float colorh = float(rand() % 256))
 	//这一段刻画的是爆炸花束粒子中的其中一条线
 	while (len)
 	{
-		// Use len as time parameter
 		//目标像素位置＝初始像素位置+偏移米×10
 		int xx = x + int(10 * vx * len / 200.0);
-		//int zz = int(10 * vz * len / 200.0);
 		double cvy = vy - g * len / 200.0;
 		int yy = y + int(10 * (cvy * cvy - vy * vy) / 2 / g);
 		vec.push_back(Particle(xx, yy, cvy));
@@ -152,10 +150,8 @@ void Fireworks::Move()
 std::list<Fireworks> vec2;
 
 clock_t ct = clock();
-void createFireworks(EnemyNode** pp_curEnemy) {
-	EnemyNode* curEnemy = *pp_curEnemy;
-	if (curEnemy->health <= 0)
-		vec2.push_back(Fireworks(curEnemy->x, curEnemy->y));//从光线顶部开始爆炸,创建烟花对象
+void createFireworks(int x, int y) {
+	vec2.push_back(Fireworks(x, y));//从光线顶部开始爆炸,创建烟花对象
 
 
 }
