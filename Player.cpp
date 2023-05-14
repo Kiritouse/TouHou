@@ -15,7 +15,9 @@ Player::Position  Struct_PlayerPosition;
 Player::Direction Struct_Direction;
 Player::ObjectState E_TYPE_PlayerState;
 int leftOpFramebuffer, rightOpFramebuffer, upOpFramebuffer, downOpFramebuffer, tempframe;
-//负责玩家的初始化
+/// <summary>
+/// 负责玩家数据的初始化
+/// </summary>
 void Player::iniPlayer() {
 	speed = 6;
 	Struct_PlayerPosition.x = 240;

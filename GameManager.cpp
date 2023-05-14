@@ -171,6 +171,11 @@ void Update() {//帧更新
 			t_begin = t_update;
 			frame.f_total++;//总帧数，10ms为一帧
 			framebuffer = frame.f_total - frame.f_pause;
+			if (framebuffer >= 0x3f3f3f3f) {
+				std::cout << "恭喜你获胜" << std::endl;
+				std::cout << "您的得分是" << user.score << std::endl;
+				writePlayer();//记录下玩家信息，用来实现排行榜
+			}
 		}
 		else continue;
 		MouseLisenter();//获取鼠标事件
