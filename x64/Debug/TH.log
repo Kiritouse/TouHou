@@ -1,8 +1,6 @@
-﻿  Bullet.cpp
+﻿  LoadResources.cpp
 D:\CHomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
-  GameManager.cpp
+  mainGame.cpp
 D:\CHomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
-D:\CHomework\TouHou\GameManager.cpp(199,9): warning C4101: “text”: 未引用的局部变量
-  ParticleManager.cpp
   正在生成代码...
   TH.vcxproj -> D:\CHomework\TouHou\x64\Debug\TH.exe

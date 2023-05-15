@@ -2,7 +2,7 @@
 #include "Bullet.h"
 #include "Music.h"
 IMAGE  startbackground, background, player, playerRight, playerLeft, normalBullets, enemy0, enemyBullet0, enemy1, boss, enterbutton, pausebutton, savebutton, continuebutton, powerProp, bunker, gameoverimg, ranklist;
-SOUND bgm, shoot, boom;
+SOUND gameScenebgm, shoot, boom;
 
 void loadResources(void) {
 	//º”‘ÿ±≥æ∞Õº∆¨
@@ -36,14 +36,12 @@ void loadResources(void) {
 	loadimage(&enemyBullet0, _T("sources\\Enemy\\EnemyBullets\\EnemyBullet0.png"));
 
 	//º”‘ÿ±≥æ∞“Ù¿÷
-	loadsound(&bgm, _T("sources\\Music\\BGM\\Weight_of_the_World.mp3"));
+	loadsound(&gameScenebgm, _T("sources\\Music\\BGM\\Weight_of_the_World.mp3"));
 	loadsound(&shoot, _T("sources\\Music\\Fire.mp3"));
 	loadsound(&boom, _T("sources\\Music\\Boom.mp3"));
 
 
 
 
-
-
-
 }
+

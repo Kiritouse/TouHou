@@ -52,7 +52,7 @@ void Bullet_listPushBack(BulletNode** pp_Player_Bullet_List_Node_Head, BulletNod
 
 void update_BulletPosition(BulletNode** pp_Player_Bullet_List_Node_Head, int command, int frameBuffer, int vx, int vy, int hitpoint)
 {
-	if (((command & CMD_FIRE) && ((frameBuffer & 1) == 0))) {
+	if (((command & CMD_FIRE) && ((frameBuffer & 3) == 0))) {
 		Bullet_listPushBack(pp_Player_Bullet_List_Node_Head, creatPlayerBullet(vx, vy, hitpoint));
 		cntBullet++;
 		playsound(1, 0);
@@ -132,7 +132,6 @@ void bulletCrashEnemyCheck(EnemyNode** pp_Enemy_List_Head, BulletNode** pp_Playe
 			else return;
 			if ((curBullet->x > curEnemy->x) && (curBullet->x < (curEnemy->x + WIDTH))) {
 				if ((curBullet->y > curEnemy->y) && (curBullet->y < (curEnemy->y + HEIGHT))) {
-					//std::cout << curEnemy->health << std::endl;
 					if (curEnemy->health <= 0) {
 						curEnemy->isExist = 0;
 						user.score++;
@@ -142,19 +141,13 @@ void bulletCrashEnemyCheck(EnemyNode** pp_Enemy_List_Head, BulletNode** pp_Playe
 
 					}
 					else {
-						//std::cout << curBullet->hitpoint << std::endl;
 						curEnemy->health -= curBullet->hitpoint;
 					}
 					curBullet->isExist = 0;
-
-
 				}
 			}
-
 			curEnemy = curEnemy->pnext;
 		}
-
-
 		curBullet = curBullet->pnext;
 	}
 }

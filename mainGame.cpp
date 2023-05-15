@@ -2,6 +2,7 @@
 #include "LoadResources.h"
 #include "Operation.h"
 #include "DataManager.h"
+#include "Music.h"
 int main() {
 
 	loadResources();

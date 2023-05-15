@@ -56,6 +56,8 @@ ParticleSwarm::ParticleSwarm(int x, int y, float colorh = float(rand() % 256))
 	{
 		//目标像素位置＝初始像素位置+偏移米×10
 		int xx = x + int(10 * vx * len / 200.0);
+
+		//根据物理公式得到像素的y坐标
 		double cvy = vy - g * len / 200.0;
 		int yy = y + int(10 * (cvy * cvy - vy * vy) / 2 / g);
 		vec.push_back(Particle(xx, yy, cvy));

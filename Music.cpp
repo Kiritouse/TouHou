@@ -1,8 +1,7 @@
-#include "Music.h"
-#include <graphics.h>
-#include <mciapi.h>
 #define _CRT_SECURE_NO_WARNINGS
-int g_soundID = 0;//“Ù∆µ±‡∫≈
+#include "Music.h"
+
+int g_soundID = 0;											//“Ù∆µ±‡∫≈
 
 void playsound(int sid, int repeat)
 {

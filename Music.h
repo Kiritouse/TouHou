@@ -1,5 +1,5 @@
 #pragma once
-typedef int SOUND;
+#include "GameManager.h"
 extern int g_soundID;
 //“Ù∆µ±‡∫≈
 typedef int SOUND;

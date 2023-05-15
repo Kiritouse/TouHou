@@ -35,9 +35,6 @@ void Player::update_PlayerPosition(int _cmd, int framebuffer) {
 	playerCollider.xr = playerCollider.xl + 8;
 	playerCollider.yu = Struct_PlayerPosition.y + ((HEIGHT_PLAYER - 8) >> 1);
 	playerCollider.yd = playerCollider.yu + 8;
-
-
-
 	static int stateRightStop = 1, stateLeftStop = 1, stateUpStop = 1, stateDownStop = 1, stateRight = 0, stateLeft = 0, stateUp = 0, stateDown = 0;
 	if (_cmd & CMD_UP && Struct_PlayerPosition.y >= 0) {
 		Struct_Direction.up = 1;
@@ -50,7 +47,7 @@ void Player::update_PlayerPosition(int _cmd, int framebuffer) {
 		stateUp = 1;
 	}
 	else {
-		if (stateUp == 1) {//如果之前的操作是右移动状态
+		if (stateUp == 1) {//如果之前的操作是上移动状态
 			Struct_Direction.up = 0;
 			stateUp = 0;
 		}
@@ -108,8 +105,11 @@ void Player::update_PlayerPosition(int _cmd, int framebuffer) {
 	}
 
 }
-
-void Player::update_PlayerImage(int frameBuffer) {//
+/// <summary>
+/// 更新玩家动画
+/// </summary>
+/// <param name="frameBuffer">总运行帧数</param>
+void Player::update_PlayerImage(int frameBuffer) {
 	int weight = 255;
 	transparentimage(NULL, Struct_PlayerPosition.x, Struct_PlayerPosition.y, WIDTH_PLAYER, HEIGHT_PLAYER,
 		originPoint_img.x, originPoint_img.y, WIDTH_PLAYER, HEIGHT_PLAYER, &player);
@@ -210,22 +210,19 @@ void Player::update_PlayerImage(int frameBuffer) {//
 		if (frameBuffer >= 30)
 			transparentimage(NULL, Struct_PlayerPosition.x, Struct_PlayerPosition.y, WIDTH_PLAYER_LEFT, HEIGHT_PLAYER_LEFT,
 				228, 0, WIDTH_PLAYER_LEFT, HEIGHT_PLAYER_LEFT, &playerLeft, weight);
-
 	}
-
-
-
 }
 void putStatePlayer() {
+	//展示玩家生命值
 	TCHAR health_text[50];
 	_stprintf_s(health_text, _T("Health:%d"), OBJ_Player->health);
 	settextcolor(RGB(255, 255, 255));
-
 	outtextxy(Struct_PlayerPosition.x - 20, Struct_PlayerPosition.y - 20, health_text);
+
+	//展示玩家得分
 	TCHAR score_text[50];
 	_stprintf_s(score_text, _T("Score:%d"), user.score);
 	settextcolor(RGB(255, 255, 255));
-
 	outtextxy(Struct_PlayerPosition.x - 13, Struct_PlayerPosition.y + HEIGHT_PLAYER, score_text);
 }
 
