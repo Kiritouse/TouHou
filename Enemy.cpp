@@ -8,6 +8,8 @@
 #include <iostream>
 #include <math.h>
 #include <random>
+#define CIRCLE_RIGHT  0
+#define CIRCLE_LEFT  1
 const double MOVE_FACTOR = 0.1;
 int cntEnemy = 0;
 //¸ºÔðµÐÈËµÄ³õÊ¼»¯
@@ -145,12 +147,12 @@ void moveLine(EnemyNode* cur) {
 }
 void moveCircle(EnemyNode* cur, int framebuffer, int type) {
 	int xnext, ynext;
-	if (type == 0) {
+	if (type == CIRCLE_RIGHT) {
 		xnext = cur->x0 + cur->r * sin(cur->radian);
 		ynext = cur->y0 - (cur->r - cur->r * cos(cur->radian));
 		cur->radian = cur->radian + cur->speed;
 	}
-	else if (type == 1) {
+	else if (type == CIRCLE_LEFT) {
 		xnext = cur->x0 - cur->r * sin(cur->radian);
 		ynext = cur->y0 - (cur->r - cur->r * cos(cur->radian));
 		cur->radian = cur->radian + cur->speed;
@@ -171,8 +173,6 @@ void moveCircle(EnemyNode* cur, int framebuffer, int type) {
 		if (xnext < WIDTH_MAP - WIDTH_ENEMY1 && ynext < HEIGHT_MAP - HEIGHT_ENEMY1 && xnext > 1 && ynext > 1) {
 			cur->x = xnext;
 			cur->y = ynext;
-
-
 		}
 		else {
 			cur->isExist = 0;
@@ -205,7 +205,6 @@ void moveRand(EnemyNode* cur, int framebuffer) {
 			cur->isExist = 0;
 			return;
 		}
-
 	}
 
 }
@@ -238,10 +237,10 @@ void update_EnemyPosition(EnemyNode** pp_Enemy_List_Node_Head, Frame frame) {//Ó
 				moveLine(cur);
 				break;
 			case DEF_MOVE_CIRCLE_RIGHT:
-				moveCircle(cur, framebuffer, 0);
+				moveCircle(cur, framebuffer, CIRCLE_RIGHT);
 				break;
 			case DEF_MOVE_CIRCLE_LEFT:
-				moveCircle(cur, framebuffer, 1);
+				moveCircle(cur, framebuffer, CIRCLE_LEFT);
 				break;
 			case DEF_MOVE_RAND:
 				moveRand(cur, framebuffer);
@@ -291,7 +290,4 @@ void listRemoveNode_Enemy(EnemyNode** pp_Enemy_List_Node_Head)
 void update_Enemy(EnemyNode** pp_Enemy_List_Node_Head, Frame frame) {
 	update_EnemyPosition(pp_Enemy_List_Node_Head, frame);
 	listRemoveNode_Enemy(pp_Enemy_List_Node_Head);
-
-
-
 }

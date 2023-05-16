@@ -1,6 +1,14 @@
-﻿  LoadResources.cpp
-D:\CHomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
-  mainGame.cpp
-D:\CHomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
-  正在生成代码...
-  TH.vcxproj -> D:\CHomework\TouHou\x64\Debug\TH.exe
+﻿  Enemy.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+D:\Chomework\TouHou\Enemy.cpp(128,12): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(129,12): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(151,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(152,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(156,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(157,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(186,12): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(187,12): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(215,17): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(218,14): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(219,14): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  TH.vcxproj -> D:\Chomework\TouHou\x64\Debug\TH.exe
