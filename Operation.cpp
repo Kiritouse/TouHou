@@ -3,6 +3,7 @@
 #include "Interface.h"
 #include "DataManager.h"
 #include "Bullet.h"
+#include "Music.h"
 #include <graphics.h>
 #include <Windows.h>
 #define START_BUTTON (m.x >= 140 && m.x <= 349 && m.y >= 400 && m.y <= 464)
@@ -81,11 +82,14 @@ void MouseLisenter() {
 				if (PauseFlag) {//上一次的状态是暂停
 					gameState.pause = 0;
 					PauseFlag = 0;//情况暂停状态
+					resumesound(0);
 				}
 				else {//上一次的状态是游戏中
 					gameState.pause = 1;
 					frame.f_zawarudo = frame.f_total;//记录下当前暂停时的时间
 					PauseFlag = 1;//进入暂停状态
+					pausesound(0);
+
 				}
 			}
 		default:

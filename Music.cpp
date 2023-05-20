@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include "Music.h"
 
-int g_soundID = 0;											//音频编号
+int g_soundID = 0;//音频编号,采用类似OpenGL的id来进行引用
 
 void playsound(int sid, int repeat)
 {
@@ -17,6 +17,16 @@ void stopsound(int sid)
 {
 	wchar_t cmdStr[32];
 	_stprintf(cmdStr, _T("stop S%d"), sid);
+	mciSendString(cmdStr, NULL, 0, NULL);
+}
+void pausesound(int sid) {
+	wchar_t cmdStr[32];
+	_stprintf(cmdStr, _T("pause S%d"), sid);
+	mciSendString(cmdStr, NULL, 0, NULL);
+}
+void resumesound(int sid) {
+	wchar_t cmdStr[32];
+	_stprintf(cmdStr, _T("resume S%d"), sid);
 	mciSendString(cmdStr, NULL, 0, NULL);
 }
 void loadsound(SOUND* pSound, const wchar_t* fileName)

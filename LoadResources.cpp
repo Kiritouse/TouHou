@@ -16,7 +16,6 @@ void loadResources(void) {
 	loadimage(&continuebutton, _T("sources\\Ui\\Button\\button-continue.png"));
 	loadimage(&ranklist, _T("sources\\Ui\\Button\\button-rankinlist.png"));
 
-	//加载道具
 
 	//加载人物动画
 	loadimage(&player, _T("sources\\Players\\PlayerUpAndDown.png"));
