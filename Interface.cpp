@@ -29,8 +29,6 @@ void Interface::paintStartInterface() {
 	else
 		transparentimage(NULL, 140, 600, 209, 64, 0, 64, 209, 64, &ranklist);
 
-
-
 	EndBatchDraw();
 
 }
@@ -47,7 +45,7 @@ void Interface::paintPauseInterface() {
 	}
 }
 void Interface::paintGameOverInterface() {
-	cleardevice();//Çå³þ
+	cleardevice();//Çå³ý
 	putimage(0, 0, &gameoverimg);
 }
 void  update_StartUI() {

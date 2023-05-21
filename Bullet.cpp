@@ -136,7 +136,7 @@ void bulletCrashEnemyCheck(EnemyNode** pp_Enemy_List_Head, BulletNode** pp_Playe
 						curEnemy->isExist = 0;
 						user.score++;
 						playsound(2, 0);
-						std::thread t1(createFireworks, curEnemy->x, curEnemy->y);//把粒子效果放入多线程中
+						std::thread t1(createBoom, curEnemy->x, curEnemy->y);//把粒子效果放入多线程中
 						t1.detach();
 
 					}

@@ -144,7 +144,6 @@
     <ClInclude Include="MathAndPhysics.h">
       <Filter>MathAndPhysics</Filter>
     </ClInclude>
-    <ClInclude Include="Flyers.h" />
     <ClInclude Include="Enemy.h">
       <Filter>敌人</Filter>
     </ClInclude>
@@ -160,5 +159,8 @@
     <ClInclude Include="bunker.h">
       <Filter>玩家\护盾</Filter>
     </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

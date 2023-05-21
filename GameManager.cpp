@@ -139,7 +139,7 @@ void ini() {
 	//初始化敌人子弹列表
 	p_Enemy_Bullet_List_Node = NULL;
 	//初始化帧数管理
-	iniFrame(frame, 0, 0, 0, 0);
+	iniFrame(frame, 0, 0, 0);
 	//初始化开始时间
 	t_begin = clock();
 	user.score = 0;
@@ -165,13 +165,12 @@ void update_Paintings(int framebuffer) {
 void Update() {//帧更新
 
 	while (gameState.gaming == 1) {
-
 		t_update = clock();
 		if (t_update - t_begin >= 10) {
 			t_begin = t_update;
 			frame.f_total++;//总帧数，10ms为一帧
-			framebuffer = frame.f_total - frame.f_pause;
-			if (framebuffer >= 0x3f3f3f3f) {
+			framebuffer = frame.f_total - frame.f_pause;//有效运行时间
+			if (frame.f_total >= 0x3f3f3f3f) {
 				std::cout << "恭喜你获胜" << std::endl;
 				std::cout << "您的得分是" << user.score << std::endl;
 				writePlayer();//记录下玩家信息，用来实现排行榜
@@ -180,6 +179,7 @@ void Update() {//帧更新
 		else continue;
 		MouseLisenter();//获取鼠标事件
 		if (!gameState.pause) {
+
 			update_Paintings(framebuffer);
 			AddItem(framebuffer);
 			n_command = GetInput();
@@ -191,17 +191,12 @@ void Update() {//帧更新
 			update_EnemyBullet(&p_Enemy_List_Node, &p_Enemy_Bullet_List_Node, 0, 6, 0, 1, framebuffer);
 		}
 		else if (gameState.pause) {
-			OBJ_interface.paintPauseInterface();//读取存档文件
+			OBJ_interface.paintPauseInterface();//绘制存档按钮
 		}
-
-
-
-
 		Sleep(20);
 	}
 	while (gameState.gameOver) {
 		OBJ_interface.paintGameOverInterface();
-		TCHAR text[50];
 		if (!flag2) {
 			writePlayer();
 			std::cout << "玩家:";
@@ -223,6 +218,5 @@ void Update() {//帧更新
 void Gaming() {
 	playsound(0, 1);
 	Update();
-
 	EndBatchDraw();
 }

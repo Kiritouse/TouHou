@@ -39,8 +39,5 @@ void loadResources(void) {
 	loadsound(&shoot, _T("sources\\Music\\Fire.mp3"));
 	loadsound(&boom, _T("sources\\Music\\Boom.mp3"));
 
-
-
-
 }
 

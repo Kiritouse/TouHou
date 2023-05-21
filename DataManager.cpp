@@ -110,7 +110,7 @@ void showRank() {
 	std::ifstream file("data.txt");
 	std::string id;
 	int tempscore;
-	while (file >> id >> tempscore) {
+	while (file >> id >> tempscore) {//依次读取
 		users.push_back({ id,tempscore });
 	}
 	//根据分数排序

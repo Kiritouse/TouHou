@@ -12,9 +12,6 @@ int main() {
 
 		MouseLisenter();//如果已经读取了存档文件,isSave变量就为1,点了开始游戏或者继续游戏后gameState就会变成gaming
 	}
-
-
-
 	while (gameState.gaming) {
 		Gaming();
 	}

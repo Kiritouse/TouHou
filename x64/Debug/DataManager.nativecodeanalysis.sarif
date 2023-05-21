@@ -1,0 +1,425 @@
+{
+  "version": "2.1.0",
+  "$schema": "https://schemastore.azurewebsites.net/schemas/json/sarif-2.1.0-rtm.5.json",
+  "runs": [
+    {
+      "results": [
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "返回值被忽略: “fscanf”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 3,
+                  "endLine": 83,
+                  "endColumn": 21
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6066",
+          "message": {
+            "text": "传递了非指针作为 _Param_(3)，而对“fscanf”的调用需要指针参数，实际类型: “class std::vector<struct User,class std::allocator<struct User> >”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 83,
+                  "startColumn": 3,
+                  "endLine": 83,
+                  "endColumn": 21
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "返回值被忽略: “fscanf”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 84,
+                  "startColumn": 3,
+                  "endLine": 84,
+                  "endColumn": 26
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "返回值被忽略: “fscanf”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 85,
+                  "startColumn": 3,
+                  "endLine": 85,
+                  "endColumn": 27
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "返回值被忽略: “fscanf”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 86,
+                  "startColumn": 3,
+                  "endLine": 86,
+                  "endColumn": 22
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "返回值被忽略: “fscanf”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 87,
+                  "startColumn": 3,
+                  "endLine": 87,
+                  "endColumn": 22
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "返回值被忽略: “fscanf”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 90,
+                  "startColumn": 3,
+                  "endLine": 90,
+                  "endColumn": 72
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "返回值被忽略: “fscanf”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 91,
+                  "startColumn": 3,
+                  "endLine": 91,
+                  "endColumn": 32
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "返回值被忽略: “fscanf”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 93,
+                  "startColumn": 3,
+                  "endLine": 93,
+                  "endColumn": 22
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "返回值被忽略: “fscanf”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 99,
+                  "startColumn": 4,
+                  "endLine": 99,
+                  "endColumn": 34
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "ruleId": "C6031",
+          "message": {
+            "text": "返回值被忽略: “fscanf”。"
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+                },
+                "region": {
+                  "startLine": 100,
+                  "startColumn": 4,
+                  "endLine": 100,
+                  "endColumn": 35
+                }
+              },
+              "logicalLocations": [
+                {
+                  "fullyQualifiedName": "loadData",
+                  "decoratedName": "?loadData@@YAXXZ",
+                  "kind": "function"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "tool": {
+        "driver": {
+          "name": "PREfast",
+          "fullName": "PREfast Code Analysis",
+          "version": "14.36.32532.0",
+          "informationUri": "https://aka.ms/cpp/ca"
+        }
+      },
+      "invocations": [
+        {
+          "executionSuccessful": true
+        }
+      ],
+      "artifacts": [
+        {
+          "location": {
+            "uri": "file:///D:/Chomework/TouHou/DataManager.cpp"
+          },
+          "roles": [
+            "analysisTarget",
+            "resultFile"
+          ],
+          "hashes": {
+            "sha-256": "96c46d2d17ea0b802fa3f5b56f9d9bc2259a696ea99abc7c1de8c35a6512ac16"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/chomework/touhou/datamanager.h"
+          },
+          "hashes": {
+            "sha-256": "36c1f20175fadd1cc1a1177f0550ca4fb2b96776f722eddff3c9f935e8f60ab0"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/chomework/touhou/player.h"
+          },
+          "hashes": {
+            "sha-256": "78da9f838cc6ed8f64a144da0bcc1d37ec4413570db2d25606dc005a0653fb27"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/chomework/touhou/gamemanager.h"
+          },
+          "hashes": {
+            "sha-256": "4b90eadcd5afffd993fdcd2dd32de016acf63a2ea5f139aeace605ab4f042104"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/chomework/touhou/interface.h"
+          },
+          "hashes": {
+            "sha-256": "b68e9de44f95052bb9d53c6dc32c0e8ec93dcee8314bd324dea0a793e527b507"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/chomework/touhou/bullet.h"
+          },
+          "hashes": {
+            "sha-256": "0f2ca76bcff7d02a00a2acc35b7dde7ed65a3219febc1c4bfd54bbd568415af1"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/chomework/touhou/enemy.h"
+          },
+          "hashes": {
+            "sha-256": "3bcddcee8796ac9af6dce0170e3af7070b441a290fda7679b3b34ed0f0c30e9a"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/chomework/touhou/framemanager.h"
+          },
+          "hashes": {
+            "sha-256": "767fcd096308ea77c9340470b638a862d9d4348d9de1081fe5b036144716c9cd"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///d:/chomework/touhou/enemybullet.h"
+          },
+          "hashes": {
+            "sha-256": "41c172bc25e9e529e51a6953eab07b662956c07287914f9b298e43a5a0dbf45b"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/microsoft visual studio/2022/community/vc/auxiliary/vs/include/graphics.h"
+          },
+          "hashes": {
+            "sha-256": "463486e44fb2c9afc1b9a4b8734f55ab32964843bbe18081b81d8dc4689d4037"
+          }
+        },
+        {
+          "location": {
+            "uri": "file:///c:/program files/microsoft visual studio/2022/community/vc/auxiliary/vs/include/easyx.h"
+          },
+          "hashes": {
+            "sha-256": "4191c00c18579aa242a4c2cdcbdf37b8d0558f8356360dddf31f6ba7b9bcd47e"
+          }
+        }
+      ]
+    }
+  ]
+}

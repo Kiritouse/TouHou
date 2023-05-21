@@ -1,5 +1,6 @@
 #include "ParticleManager.h"
 #include "Map.h"
+#include <iostream>
 #include <time.h>
 #include <list>
 #include <graphics.h>
@@ -12,7 +13,8 @@ const double v_max = sqrt(2 * g * h_max / 10);	// ×î´ó³õËÙ¶È mgh=mv^2 ÖØÁ¦ÊÆÄÜ=¶
 //³ıÒÔ10µÄÔµ¹ÊÊÇ¹«Ê½ÊÇÓÃm×öµ¥Î»,1m´ú±í10¸öÏñËØµã
 const int n_max = 5;				// ÑÌ»¨ÔÚÆÁÄ»ÉÏÍ¬Ê±´æÔÚ×î¶àµÄÊıÁ¿
 
-class ParticleSwarm
+//Á£×ÓÊø
+class Particles
 {
 	struct Particle
 	{
@@ -23,24 +25,24 @@ class ParticleSwarm
 		Particle(int xx, int yy, double vv) :x(xx), y(yy), vy(vv) {}
 	};
 public:
-	ParticleSwarm(int, int, float);
+	Particles(int, int, float);
 	void Draw() const;
 	void Move();
-	bool Finish() const { return vec.size() <= 1; }
+	bool Finish() const { return list_Particle.size() <= 1; }
 
 private:
 	double vx;
 	double vz = 0;
 	float hsv_h;
 	clock_t ct = 0;
-	std::list<Particle> vec;
+	std::list<Particle> list_Particle;
 };
-ParticleSwarm::ParticleSwarm(int x, int y, float colorh = float(rand() % 256))
+Particles::Particles(int x, int y, float colorh = float(rand() % 256))
 {
 	hsv_h = colorh + rand() % 20;
 	hsv_h = hsv_h > 255 ? hsv_h - 256 : hsv_h;//±£Ö¤ÑÕÉ«ÖµÔÚ0-255Ö®¼ä
 
-	//ZÖáµÄ¸ºÏò¶Ô×ÅÈË£¬¼´ÈË¶Ô×ÅÆÁÄ»µÄ·½ÏòÎªZÖáµÄÕıÏò,ÓëOpenGLµÄÏà·´
+	//ÉãÏñ»ú·½Ïò¿´ÏòzÖá¸º·½Ïò
 	double vm = v_max / 2 * (rand() % 5 + 15.0) / 25.0;
 	double radian_xz = (rand() % 360) * PI / 180;//XÖáÆ«ÏòZÖáµÄ½Ç¶È0--2*PI
 	double radian_xy = (rand() % 90) * PI / 180 + PI / 2;//XÖáÆ«ÏòYÖáµÄ½Ç¶ÈPI/2--PI
@@ -59,26 +61,26 @@ ParticleSwarm::ParticleSwarm(int x, int y, float colorh = float(rand() % 256))
 		//¸ù¾İÎïÀí¹«Ê½µÃµ½ÏñËØµÄy×ø±ê
 		double cvy = vy - g * len / 200.0;//v2 = v0-gt;
 		int yy = y + int(10 * (cvy * cvy - vy * vy) / 2 / g);//vt^2-v0^2 = 2gx;
-		vec.push_back(Particle(xx, yy, cvy));
+		list_Particle.push_back(Particle(xx, yy, cvy));
 		len--;
 	}
 }
-void ParticleSwarm::Draw() const
+void Particles::Draw() const
 {
 	int n = 0;
-	auto size = vec.size();
-	for (auto& x : vec)
+	auto size = list_Particle.size();
+	for (auto& x : list_Particle)
 	{
 		if (x.x >= 0 && x.x < SCREENWIDTH && x.y >= 0 && x.y < SCREENHEIGHT)
 		{
 			//ÑÌ»¨ÏßÌõµÄÎ²¶ËÁÁ¶È×îµÍ£¬·´Ö®Ê×¶ËÊÇ±È½ÏÁÁµÄ
-			float cv = 0.2f + 0.8f * (size - n) / size - x.z; //Ô­À´µÄfloat cv = 0.2f + 0.8f * (size - n) / size - x.z / 40 * 0.1f
+			float cv = 0.2f + 0.8f * (size - n) / size - x.z;
 			auto color = HSVtoRGB(hsv_h, 1.0f, cv > 0 ? cv : 0);
-			if (x.z < 0)		// Z axis vertical screen inwordÈç¹ûÑÌ»¨ÊÇÍùÆÁÄ»ÍâÀ©É¢µÄ»°£¬¾Í°ÑÏñËØµã±ä´ó
+			if (x.z > 0)		// Z axis vertical screen inwordÈç¹ûÑÌ»¨ÊÇÍùÆÁÄ»ÍâÀ©É¢µÄ»°£¬¾Í°ÑÏñËØµã±ä´ó
 			{
 				//ËùÎ½±ä´ó¾ÍÊÇ»­Ò»¸ö¶ş¸ö·Ç³£Ğ¡µÄÊµĞÄµÄÔ²
 				setfillcolor(color);//ÉèÖÃµ±Ç°Éè±¸Ìî³äÑÕÉ«
-				solidcircle(x.x, x.y, abs(x.z) / 80 > 1 ? 2 : 1);
+				solidcircle(x.x, x.y, x.z / 80 > 1 ? 2 : 1);
 			}
 			else
 				putpixel(x.x, x.y, color);
@@ -86,19 +88,19 @@ void ParticleSwarm::Draw() const
 		++n;
 	}
 }
-void ParticleSwarm::Move()
+void Particles::Move()
 {
-	if (ct == 0)
+	if (ct == 0)//¼ÇÂ¼ÏÂ´´½¨Á£×ÓÊøÊ±µÄÊ±¼ä
 	{
 		ct = clock();
 		Draw();
 		return;
 	}
-	for (int i = 0; i < 3 && vec.size() > 1; i++)//
-		vec.pop_back();		// Delete particles for shortening length»­ÃæÃ¿´ÎË¢ĞÂÉ¾³ı3¸öÄ©Î²Á£×Ó
+	for (int i = 0; i < 3 && list_Particle.size() > 1; i++)//
+		list_Particle.pop_back();		// »­ÃæÃ¿´ÎË¢ĞÂÉ¾³ı3¸öÄ©Î²Á£×Ó
 	clock_t t = clock() - ct;
 	ct = clock();
-	for (auto& x : vec)//±¬Õ¨»¨ÊøÖ®ÖĞÒ»Ìõ¹âÏËµÄÁ£×Ó³ÖĞøÔË¶¯
+	for (auto& x : list_Particle)//±¬Õ¨»¨ÊøÖ®ÖĞÒ»Ìõ¹âÏËµÄÁ£×Ó³ÖĞøÔË¶¯
 	{
 		double vy_cur = x.vy - g * t / 1000.0;//vy = v0-gt;
 		x.x += int(10 * vx * t / 1000.0);//½üËÆµ±×÷ÔÈËÙÖ±ÏßÔË¶¯
@@ -111,51 +113,52 @@ void ParticleSwarm::Move()
 
 
 
-class Fireworks
+class Boom
 {
 public:
-	Fireworks(int, int);
+	Boom(int, int);
 	void Move();
-	bool Empty() const { return vec.empty(); }
+	bool isEmpty() const { return list_ParticleSwarm.empty(); }
 
 private:
-	std::list<ParticleSwarm> vec;
+	std::list<Particles> list_ParticleSwarm;
 };
-Fireworks::Fireworks(int x, int y)
+Boom::Boom(int x, int y)
 {
-	bool colorful = rand() % 100 < 20 ? true : false;//1/5µÄ¼¸ÂÊÅĞ¶Ï
+	srand(time(nullptr));
+	bool colorful = rand() % 100 < 20 ? true : false;//1/5µÄ¼¸ÂÊÅĞ¶ÏÃ¿Ò»Ìõ¹âÊøÊÇ·ñÓ¦¸ÃÎª¶àÖÖÑÕÉ«
 	float h = float(rand() % 256);
-	int n = rand() % 5 + 45;//ÑÌ»¨Éıµ½¶¥µãºó£¬±¬Õ¨³öÀ´µÄ¹âÏßÁ¿
+	int n = rand() % 5 + 45;//±¬Õ¨³öÀ´µÄ¹âÏßÁ¿
 	for (int i = 0; i < n; i++)
 	{
-		if (colorful)//¾ö¶¨ÑÌ»¨µÄ±¬Õ¨¹âÏß£¬Ã¿Ò»ÌõÊÇ·ñÊÇÍ¬Ò»ÑÕÉ«µÄ¡£1/5µÄ¼¸ÂÊÅĞ¶Ï
-			vec.push_back(ParticleSwarm(x, y));
+
+		if (colorful) {//¾ö¶¨ÑÌ»¨µÄ±¬Õ¨¹âÏß£¬Ã¿Ò»ÌõÊÇ·ñÓ¦¸ÃÎª¶àÖÖÑÕÉ«
+			list_ParticleSwarm.push_back(Particles(x, y));
+		}
 		else
-			vec.push_back(ParticleSwarm(x, y, h));
+			list_ParticleSwarm.push_back(Particles(x, y, h));
 	}
 }
-void Fireworks::Move()
+void Boom::Move()
 {
-	std::list<decltype(vec.begin())> toDel;
-	for (auto it = vec.begin(); it != vec.end(); ++it)
+	std::list<decltype(list_ParticleSwarm.begin())> toDel;
+	for (auto it = list_ParticleSwarm.begin(); it != list_ParticleSwarm.end(); ++it)
 	{
-		if (it->Finish())//Èç¹û¸ÃÁ£×ÓÈºÀïµÄÁ£×ÓÊıÖ»Ê£ÏÂÒ»¸ö£¬ÔòÌø¹ı
+		if (it->Finish())//Èç¹û¸ÃÁ£×ÓÊøÈºÀïµÄÄ³µ¥¸öÁ£×ÓÊøµÄÁ£×ÓÊıÖ»Ê£ÏÂÒ»¸ö£¬ÔòÉ¾³ı¸ÃÁ£×ÓÊø£¬²¢ÇÒÌø¹ı
 		{
 			toDel.push_back(it);
 			continue;
 		}
-		it->Move();//Èç¹ûÁ£×ÓÈºÀïµÄÁ£×ÓÊı²»Ö»ÊÇÊ£ÏÂÒ»¸ö£¬Ôò¼ÌĞøÃè»­ËüµÄ¹ì¼£
+		it->Move();
 	}
 	for (auto& x : toDel)
-		vec.erase(x);
+		list_ParticleSwarm.erase(x);
 }
-std::list<Fireworks> vec2;
+std::list<Boom> list_Boom;
 
 clock_t ct = clock();
-void createFireworks(int x, int y) {
-	vec2.push_back(Fireworks(x, y));//´Ó¹âÏß¶¥²¿¿ªÊ¼±¬Õ¨,´´½¨ÑÌ»¨¶ÔÏó
-
-
+void createBoom(int x, int y) {
+	list_Boom.push_back(Boom(x, y));//´Ó¹âÏß¶¥²¿¿ªÊ¼±¬Õ¨,´´½¨ÑÌ»¨¶ÔÏó
 }
 void update_Particle() {
 
@@ -163,10 +166,10 @@ void update_Particle() {
 	{
 
 		ct = clock();
-		std::list<decltype(vec2.begin())> toDel2;
-		for (auto it = vec2.begin(); it != vec2.end(); ++it)
+		std::list<decltype(list_Boom.begin())> toDel2;
+		for (auto it = list_Boom.begin(); it != list_Boom.end(); ++it)
 		{
-			if (it->Empty())
+			if (it->isEmpty())//Èç¹ûÁ£×ÓÊøÈºÎª¿Õ
 			{
 				toDel2.push_back(it);//Ò»¾ä»°À´Ëµ¾ÍÊÇ´¢´æÄÄ¸öÎ»ÖÃĞèÒªÉ¾³ı
 				continue;
@@ -174,6 +177,6 @@ void update_Particle() {
 			it->Move();
 		}
 		for (auto& it : toDel2)
-			vec2.erase(it);
+			list_Boom.erase(it);
 	}
 }
