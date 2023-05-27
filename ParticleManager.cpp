@@ -26,11 +26,12 @@ class Particles
 	};
 public:
 	Particles(int, int, float);
-	void Draw() const;
+	void Draw();
 	void Move();
-	bool Finish() const { return list_Particle.size() <= 1; }
+	bool Finish() {
+		return list_Particle.size() <= 1;
+	}
 
-private:
 	double vx;
 	double vz = 0;
 	float hsv_h;
@@ -65,7 +66,7 @@ Particles::Particles(int x, int y, float colorh = float(rand() % 256))
 		len--;
 	}
 }
-void Particles::Draw() const
+void Particles::Draw()
 {
 	int n = 0;
 	auto size = list_Particle.size();
@@ -73,10 +74,10 @@ void Particles::Draw() const
 	{
 		if (x.x >= 0 && x.x < SCREENWIDTH && x.y >= 0 && x.y < SCREENHEIGHT)
 		{
-			//烟花线条的尾端亮度最低，反之首端是比较亮的
+			//光束线条的尾端亮度最低，反之首端是比较亮的
 			float cv = 0.2f + 0.8f * (size - n) / size - x.z;
 			auto color = HSVtoRGB(hsv_h, 1.0f, cv > 0 ? cv : 0);
-			if (x.z > 0)		// Z axis vertical screen inword如果烟花是往屏幕外扩散的话，就把像素点变大
+			if (x.z > 0)		// 如果烟花是往屏幕外扩散的话，就把像素点变大
 			{
 				//所谓变大就是画一个二个非常小的实心的圆
 				setfillcolor(color);//设置当前设备填充颜色
@@ -100,7 +101,7 @@ void Particles::Move()
 		list_Particle.pop_back();		// 画面每次刷新删除3个末尾粒子
 	clock_t t = clock() - ct;
 	ct = clock();
-	for (auto& x : list_Particle)//爆炸花束之中一条光纤的粒子持续运动
+	for (auto& x : list_Particle)//爆炸光束之中一条光纤的粒子持续运动
 	{
 		double vy_cur = x.vy - g * t / 1000.0;//vy = v0-gt;
 		x.x += int(10 * vx * t / 1000.0);//近似当作匀速直线运动
@@ -120,7 +121,7 @@ public:
 	void Move();
 	bool isEmpty() const { return list_ParticleSwarm.empty(); }
 
-private:
+
 	std::list<Particles> list_ParticleSwarm;
 };
 Boom::Boom(int x, int y)
@@ -132,7 +133,7 @@ Boom::Boom(int x, int y)
 	for (int i = 0; i < n; i++)
 	{
 
-		if (colorful) {//决定烟花的爆炸光线，每一条是否应该为多种颜色
+		if (colorful) {//决定爆炸特效的爆炸光线每一条是否应该为多种颜色
 			list_ParticleSwarm.push_back(Particles(x, y));
 		}
 		else
@@ -158,7 +159,7 @@ std::list<Boom> list_Boom;
 
 clock_t ct = clock();
 void createBoom(int x, int y) {
-	list_Boom.push_back(Boom(x, y));//从光线顶部开始爆炸,创建烟花对象
+	list_Boom.push_back(Boom(x, y));//从光线顶部开始爆炸,创建爆炸对象
 }
 void update_Particle() {
 

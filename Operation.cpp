@@ -18,8 +18,8 @@ int GetInput() {
 	if (GetAsyncKeyState(VK_RIGHT) & 0x8000)	inputState |= CMD_RIGHT;
 	if (GetAsyncKeyState(VK_UP) & 0x8000)		inputState |= CMD_UP;
 	if (GetAsyncKeyState(VK_DOWN) & 0x8000)		inputState |= CMD_DOWN;
-	if (GetAsyncKeyState('Z') && 0X8000) inputState |= CMD_FIRE;
-	if (GetAsyncKeyState('X') && 0X8000) inputState |= CMD_SKILL;
+	if (GetAsyncKeyState('Z') & 0X8000) inputState |= CMD_FIRE;
+	if (GetAsyncKeyState('X') & 0X8000) inputState |= CMD_SKILL;
 	return inputState;
 }
 void MouseLisenter() {
@@ -59,7 +59,7 @@ void MouseLisenter() {
 			}
 			if (CONTINUE_BUTTON) {//读取存档
 				loadData();
-				isSave = 1;//代表已经读取了存档文件
+
 				gameState.startUI = 0;
 				gameState.gaming = 1;
 			}
@@ -106,7 +106,7 @@ void MouseLisenter() {
 			if (SAVE_BUTTON) {
 				buttonState.saveButtonIsHit = 1;
 				writeData();
-				isSave = 1;
+
 			}
 
 			else

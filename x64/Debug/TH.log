@@ -1,10 +1,3 @@
-﻿  Bullet.cpp
-D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
-  GameManager.cpp
-D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
-  LoadResources.cpp
-D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
-  ParticleManager.cpp
-D:\Chomework\TouHou\ParticleManager.cpp(128,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
-  正在生成代码...
+﻿  ParticleManager.cpp
+D:\Chomework\TouHou\ParticleManager.cpp(129,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
   TH.vcxproj -> D:\Chomework\TouHou\x64\Debug\TH.exe

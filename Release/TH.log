@@ -1,0 +1,65 @@
+﻿  Bullet.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  bunker.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  DataManager.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+D:\Chomework\TouHou\DataManager.cpp(83,15): warning C4477: “fscanf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“std::vector<User,std::allocator<User>>”
+D:\Chomework\TouHou\DataManager.cpp(83,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(84,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(86,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(87,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(88,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(90,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(91,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(93,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(98,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(99,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Draw.cpp
+D:\Chomework\TouHou\Draw.cpp(67,39): warning C4838: 从“int”转换到“BYTE”需要收缩转换
+  Enemy.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+D:\Chomework\TouHou\Enemy.cpp(129,12): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(130,12): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(152,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(153,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(157,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(158,19): warning C4244: “=”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(187,12): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(188,12): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(215,17): warning C4244: “+=”: 从“double”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(218,14): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+D:\Chomework\TouHou\Enemy.cpp(219,14): warning C4244: “初始化”: 从“double”转换到“int”，可能丢失数据
+  EnemyBullet.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+D:\Chomework\TouHou\EnemyBullet.cpp(15,63): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\Chomework\TouHou\EnemyBullet.cpp(16,64): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+D:\Chomework\TouHou\EnemyBullet.cpp(134,55): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+D:\Chomework\TouHou\EnemyBullet.cpp(134,38): warning C4244: “参数”: 从“float”转换到“int”，可能丢失数据
+  FrameManager.cpp
+  mainGame.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  GameManager.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  Interface.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  LoadResources.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  Map.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  MathAndPhysics.cpp
+  Music.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+D:\Chomework\TouHou\Music.cpp(35,10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  Operation.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+D:\Chomework\TouHou\Operation.cpp(29,10): warning C4101: “hcur”: 未引用的局部变量
+  ParticleManager.cpp
+D:\Chomework\TouHou\ParticleManager.cpp(129,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+  Player.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  正在生成代码
+  Previous IPDB not found, fall back to full compilation.
+  All 1144 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  TH.vcxproj -> D:\Chomework\TouHou\x64\Release\TH.exe

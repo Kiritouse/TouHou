@@ -9,7 +9,7 @@
 #include <algorithm>
 const int I_ENEMY0 = 114514;
 const int I_ENEMY1 = 1919810;
-int isSave = 0;//是否有存档
+
 
 std::vector<User> users;
 bool compare(User a, User b) {
@@ -79,19 +79,18 @@ void loadData() {
 		exit(2);
 	}
 	else {
-		//读取游戏开始时间
+		//读取用户名称和分数
 		fscanf(fpp, "%s", users);
 		fscanf(fpp, "%d", &user.score);
+
 		fscanf(fpp, "%d", &frame.f_total);
 		fscanf(fpp, "%d", &tempFrame_LineMove);
 		fscanf(fpp, "%d", &tempFrame_CircleMove);
-		//std::cout << "读取的时间为" << framebuffer << std::endl;
 		//读取玩家状态
 		fscanf(fpp, "%d %d", &Struct_PlayerPosition.x, &Struct_PlayerPosition.y);
 		fscanf(fpp, "%d", &OBJ_Player->health);
 
 		fscanf(fpp, "%d", &cntBullet);
-		//std::cout << cntBullet << std::endl;
 		int  tempx = 0, tempy = 0;
 		int tempvx = 0, tempvy = 0;
 		int temphitpoint = 0;

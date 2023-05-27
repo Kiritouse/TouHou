@@ -6,9 +6,10 @@
 #include "EnemyBullet.h"
 #include "FrameManager.h"
 #include "Enemy.h"
+#include <time.h>
 #include <iostream>
 #include <graphics.h>
-#pragma
+
 struct GameState
 {
 	int gaming = 0, pause = 0, gameOver = 0, startUI = 1, ranklist = 0;

@@ -138,5 +138,4 @@ void update_EnemyBulletImage(EnemyBulletNode** pp_Enemy_Bullet_List_Head) {
 void update_EnemyBullet(EnemyNode** pp_Enemy_List_Head, EnemyBulletNode** pp_Enemy_Bullet_List_Head, float vx, float vy, int level, int hitpoint, int framebuffer) {
 	update_EnemyBulletPosition(pp_Enemy_List_Head, pp_Enemy_Bullet_List_Head, vx, vy, level, hitpoint, framebuffer);
 	listRemoveNodeEnemyBullet(pp_Enemy_Bullet_List_Head);
-
 }

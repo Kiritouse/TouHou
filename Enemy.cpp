@@ -8,6 +8,7 @@
 #include <iostream>
 #include <math.h>
 #include <random>
+#include <time.h>
 #define CIRCLE_RIGHT  0
 #define CIRCLE_LEFT  1
 const double MOVE_FACTOR = 0.1;
