@@ -7,6 +7,7 @@
 #include <vector>
 #include <fstream>
 #include <algorithm>
+#include <iostream>
 const int I_ENEMY0 = 114514;
 const int I_ENEMY1 = 1919810;
 
@@ -18,7 +19,7 @@ bool compare(User a, User b) {
 void writeData() {
 	//储存玩家数据
 	FILE* fp;//游戏存档文件句柄
-	fopen_s(&fp, "save.txt", "w");
+	fopen_s(&fp, "save.txt", "w+");
 	if (fp == NULL) {
 		fprintf(stderr, "Can't open save.txt!\n");
 		exit(1);
@@ -73,7 +74,7 @@ void writePlayer() {//只有玩家阵亡后才会调用这个函数，将玩家的最终得分写入
 
 void loadData() {
 	FILE* fpp;
-	fopen_s(&fpp, "save.txt", "r");
+	fopen_s(&fpp, "save.txt", "r+");
 	if (fpp == NULL) {
 		fprintf(stderr, "Can't open save.txt!\n");
 		exit(2);
@@ -110,6 +111,8 @@ void showRank() {
 	std::string id;
 	int tempscore;
 	while (file >> id >> tempscore) {//依次读取
+		if (id.size() == 0)
+			continue;
 		users.push_back({ id,tempscore });
 	}
 	//根据分数从大到小排序

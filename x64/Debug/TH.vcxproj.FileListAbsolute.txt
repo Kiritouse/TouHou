@@ -1,2 +1,1 @@
 D:\CHomework\TouHou\x64\Debug\TH.exe
-D:\Chomework\TouHou\x64\Debug\TH.pdb

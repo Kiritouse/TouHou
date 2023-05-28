@@ -1,3 +1,14 @@
-﻿  ParticleManager.cpp
-D:\Chomework\TouHou\ParticleManager.cpp(129,12): warning C4244: “参数”: 从“time_t”转换到“unsigned int”，可能丢失数据
+﻿  DataManager.cpp
+D:\Chomework\TouHou\Bullet.h(1,1): warning C4828: 文件包含在偏移 0x360 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+D:\Chomework\TouHou\DataManager.cpp(84,15): warning C4477: “fscanf”: 格式字符串“%s”需要类型“char *”的参数，但可变参数 1 拥有了类型“std::vector<User,std::allocator<User>>”
+D:\Chomework\TouHou\DataManager.cpp(84,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(85,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(87,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(88,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(89,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(91,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(92,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(94,3): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(99,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\Chomework\TouHou\DataManager.cpp(100,4): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   TH.vcxproj -> D:\Chomework\TouHou\x64\Debug\TH.exe
