@@ -106,13 +106,13 @@ void loadData() {
 void showRank() {
 
 	//依次读取用户id和分数并且存入结构体中;
-	std::ifstream file("data.txt");
+	std::ifstream file("data.txt");//输入文件流
 	std::string id;
 	int tempscore;
 	while (file >> id >> tempscore) {//依次读取
 		users.push_back({ id,tempscore });
 	}
-	//根据分数排序
+	//根据分数从大到小排序
 	std::stable_sort(users.begin(), users.end(), compare);
 	//显示出排序结果
 	std::cout << "排行榜：" << std::endl;

@@ -33,7 +33,7 @@ void loadsound(SOUND* pSound, const wchar_t* fileName)
 {
 	wchar_t* cmdStr;
 	int len = _tcslen(fileName) * sizeof(wchar_t);//根据地址字符串计算所需内存空间
-	len += 32 * sizeof(wchar_t);//预留一些空间
+	len += 32 * sizeof(wchar_t);//预留一些空间,便于字符串拼接
 	cmdStr = (wchar_t*)malloc(len);
 	_stprintf(cmdStr, _T("open \"%s\" type mpegvideo alias S%d"), fileName, g_soundID);
 	*pSound = g_soundID;//利用id进行引用音频文件
